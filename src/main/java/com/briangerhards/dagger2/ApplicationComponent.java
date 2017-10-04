@@ -5,7 +5,7 @@ import dagger.Component;
 import javax.inject.Singleton;
 
 @Singleton
-@Component(modules = {BookbagModule.class})
+@Component()
 public interface ApplicationComponent {
         Bookbag getBookbag();
 }
