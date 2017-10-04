@@ -12,7 +12,7 @@ public class Bookbag {
     }
 
     public String helloWorld(){
-        return "Hello world";
+        return trapperKeeper.getNote();
     }
 
 

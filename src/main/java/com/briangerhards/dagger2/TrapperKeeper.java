@@ -8,10 +8,11 @@ public class TrapperKeeper {
 
     @Inject
     TrapperKeeper(){
-        this.note = "Hello world";
+        this.note = "Hello worlds";
     }
 
     public String getNote(){
         return this.note;
     }
+
 }
