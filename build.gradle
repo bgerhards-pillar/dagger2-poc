@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'application'
     id "net.ltgt.apt" version "0.10"
+    id "idea"
 }
 
 group 'dagger2test'
@@ -24,5 +25,13 @@ dependencies {
 jar {
     manifest {
         attributes 'Main-Class': 'com.briangerhards.dagger2.Main'
+    }
+}
+
+sourceSets.main.java.srcDir new File(buildDir, 'generated/javacc')
+idea {
+    module {
+        // Marks the already(!) added srcDir as "generated"
+        generatedSourceDirs += file('build/generated/javacc')
     }
 }
